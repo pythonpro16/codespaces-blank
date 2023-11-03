@@ -1,0 +1,9 @@
+// SQLAlchemy provides a tool called "Alembic" that can help you manage database schema changes
+pip install alembic
+alembic init alembic
+sqlalchemy.url = sqlite:///your_database.db // in alembic.ini file also have sqlalchemy.url = default so delete and add this
+
+// before this you may need to specify target_metadata = our current file base in 'env.py'
+// from basic_alchemy import Base //target_metadata =  Base.metadata
+
+alembic revision --autogenerate -m "Initial database state"
