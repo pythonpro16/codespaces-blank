@@ -7,3 +7,5 @@ sqlalchemy.url = sqlite:///your_database.db // in alembic.ini file also have sql
 // from basic_alchemy import Base //target_metadata =  Base.metadata
 
 alembic revision --autogenerate -m "Initial database state"
+
+in alembic /versions, you need to update migration file upgrade or downgrade what you want to update in the table
